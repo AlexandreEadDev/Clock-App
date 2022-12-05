@@ -1,76 +1,83 @@
-body{
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    overflow: hidden;
-    background: #1E1E1E;
+body {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  overflow: hidden;
+  background: #1e1e1e;
 }
 
 .clock {
-    position: absolute;
-    width: 500px;
-    height: 200px;
-    left: 470px;
-    top: 198px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 100px;
-    line-height: 150px;
-    text-align: center;
-    
-    color: #FFA500;
-    
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  left: 470px;
+  top: 100px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 100px;
+  line-height: 150px;
+  text-align: center;
+
+  color: #ffa500;
 }
 
-.alarm{
-    position: absolute;
-width: 400px;
-height: 150px;
-left: 161px;
-top: 473px;
+.alarm {
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  left: 161px;
+  top: 473px;
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 70px;
-line-height: 105px;
-text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 105px;
+  text-align: center;
 
-color: #FFFFFF;
+  color: #ffffff;
 }
 
-.stopwatch{
-    position: absolute;
-width: 400px;
-height: 150px;
-left: 520px;
-top: 550px;
+.stopwatch {
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  left: 520px;
+  top: 550px;
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 70px;
-line-height: 105px;
-text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 105px;
+  text-align: center;
 
-color: #FFFFFF;
+  color: #ffffff;
 }
 
-.timer{
-    position: absolute;
-width: 400px;
-height: 150px;
-left: 872px;
-top: 473px;
+.timer {
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  left: 872px;
+  top: 473px;
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 70px;
-line-height: 105px;
-text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 105px;
+  text-align: center;
 
-color: #FFFFFF;
+  color: #ffffff;
+}
+
+.clockImg {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 645px;
+  top: 323px;
 }
