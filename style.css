@@ -1,83 +1,55 @@
 body {
   position: relative;
-  width: 1440px;
-  height: 1024px;
-  overflow: hidden;
+  width: auto;
+  height: auto;
   background: #1e1e1e;
+  overflow: hidden;
+}
+
+.text-decoration {
+  text-decoration: none;
 }
 
 .clock {
-  position: absolute;
-  width: 500px;
-  height: 200px;
-  left: 470px;
-  top: 100px;
-
+  width: 345px;
+  height: 100px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 100px;
-  line-height: 150px;
   text-align: center;
 
   color: #ffa500;
 }
 
 .alarm {
-  position: absolute;
   width: 400px;
   height: 150px;
-  left: 161px;
-  top: 473px;
-
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 70px;
-  line-height: 105px;
   text-align: center;
 
   color: #ffffff;
 }
 
 .stopwatch {
-  position: absolute;
   width: 400px;
   height: 150px;
-  left: 520px;
-  top: 550px;
-
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 70px;
-  line-height: 105px;
   text-align: center;
 
   color: #ffffff;
 }
 
 .timer {
-  position: absolute;
   width: 400px;
   height: 150px;
-  left: 872px;
-  top: 473px;
-
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 70px;
-  line-height: 105px;
   text-align: center;
 
   color: #ffffff;
-}
-
-.clockImg {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 645px;
-  top: 323px;
 }
