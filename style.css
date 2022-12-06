@@ -11,7 +11,7 @@ body {
 }
 
 .clock {
-  width: 345px;
+  width: 500px;
   height: 100px;
   font-family: "Poppins";
   font-style: normal;
@@ -52,4 +52,18 @@ body {
   text-align: center;
 
   color: #ffffff;
+}
+
+.alarm:hover,
+.stopwatch:hover,
+.timer:hover {
+  transition: 1s;
+  font-size: 80px;
+  color: #ffa500;
+}
+
+.clock:hover,
+.frame:hover {
+  transition: 1s;
+  font-size: 110px;
 }

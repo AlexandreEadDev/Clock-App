@@ -1,7 +1,7 @@
 @media (min-width: 991.98px) {
   .clock {
     position: absolute;
-    left: calc(50% - 345px / 2 - 22.5px);
+    left: calc(50% - 500px / 2 - 22.5px);
     top: calc(50% - 300px / 2 + 239px);
 
     font-size: 100px;
