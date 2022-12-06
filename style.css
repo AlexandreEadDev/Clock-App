@@ -23,7 +23,7 @@ body {
 
 .alarm {
   width: 400px;
-  height: 150px;
+  height: 100px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -34,7 +34,7 @@ body {
 
 .stopwatch {
   width: 400px;
-  height: 150px;
+  height: 100px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
@@ -45,25 +45,11 @@ body {
 
 .timer {
   width: 400px;
-  height: 150px;
+  height: 100px;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   text-align: center;
 
   color: #ffffff;
-}
-
-.alarm:hover,
-.stopwatch:hover,
-.timer:hover {
-  transition: 1s;
-  font-size: 80px;
-  color: #ffa500;
-}
-
-.clock:hover,
-.frame:hover {
-  transition: 1s;
-  font-size: 110px;
 }

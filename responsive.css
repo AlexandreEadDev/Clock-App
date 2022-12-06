@@ -42,6 +42,18 @@
     font-size: 70px;
     line-height: 105px;
   }
+  .alarm:hover,
+  .stopwatch:hover,
+  .timer:hover {
+    transition: 1s;
+    font-size: 80px;
+    color: #ffa500;
+  }
+
+  .clock:hover {
+    transition: 1s;
+    font-size: 110px;
+  }
 }
 
 @media (max-width: 1005px) {
