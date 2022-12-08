@@ -45,13 +45,13 @@
   .alarm:hover,
   .stopwatch:hover,
   .timer:hover {
-    transition: 1s;
+    transition: 0.5s;
     font-size: 80px;
     color: #ffa500;
   }
 
   .clock:hover {
-    transition: 1s;
+    transition: 0.5s;
     font-size: 110px;
   }
 }
@@ -105,5 +105,17 @@
     flex-grow: 0;
 
     font-size: 50px;
+  }
+  .alarm:hover,
+  .stopwatch:hover,
+  .timer:hover {
+    transition: 0.5s;
+    font-size: 60px;
+    color: #ffa500;
+  }
+
+  .clock:hover {
+    transition: 0.5s;
+    font-size: 85px;
   }
 }
