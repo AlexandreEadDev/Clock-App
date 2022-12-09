@@ -1,8 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  transform: translateX(-70px);
+}
+
+header i {
+  position: absolute;
+  color: #ffa351ff;
+  margin: 10px 10px 10px 10px;
+  font-size: 2em;
+}
+
 body {
   position: relative;
   width: auto;
   height: auto;
-  background: #1e1e1e;
+  background: #201e20;
   overflow: hidden;
 }
 
@@ -13,44 +35,24 @@ body {
 .clock {
   width: 500px;
   height: 100px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  text-align: center;
-
-  color: #ffa500;
+  color: #ffa351ff;
 }
 
 .alarm {
   width: 400px;
   height: 100px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  text-align: center;
-
   color: #ffffff;
 }
 
 .stopwatch {
   width: 400px;
   height: 100px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  text-align: center;
-
   color: #ffffff;
 }
 
 .timer {
   width: 400px;
   height: 100px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  text-align: center;
-
   color: #ffffff;
 }
 
@@ -62,27 +64,27 @@ body {
 
 .animated-clock {
   position: relative;
-  border: 5px solid #ffa500;
-  background: #1e1e1e;
+  border: 5px solid #ffa351ff;
+  background: #201e20;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.animated-clock:after,
-.animated-clock:before {
+.animated-clock::after,
+.animated-clock::before {
   content: "";
   position: absolute;
   width: 6px;
-  background: #ffa500;
+  background: #ffa351ff;
   border-radius: 10px;
   top: 10px;
   animation: clockAnimation 5s infinite linear;
   transform-origin: center calc(100% - 5px);
 }
 
-.animated-clock:before {
+.animated-clock::before {
   animation-duration: 15s;
 }
 
@@ -93,4 +95,90 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.digital-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#time {
+  display: flex;
+  gap: 40px;
+  color: #ffffff;
+}
+
+#time .circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#time .circle svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+
+#time .circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: #191919;
+  stroke-width: 4;
+  transform: translate(5px, 5px);
+}
+
+#time .circle svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+}
+
+#time div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5em;
+  transform: translateY(-10px);
+}
+
+#time div span {
+  position: absolute;
+  transform: translateX(-50%) translateY(-5px);
+  font-size: 0.35em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#time .ap {
+  position: relative;
+  font-size: 1em;
+  transform: translateX(-20px);
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.dots::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr), 0 0 40px var(--clr);
 }

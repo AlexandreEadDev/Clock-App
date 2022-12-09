@@ -46,24 +46,24 @@
   .timer:hover {
     transition: 0.5s;
     font-size: 80px;
-    color: #ffa500;
+    color: #eed971ff;
   }
 
   .clock:hover {
     transition: 0.5s;
     font-size: 110px;
   }
-  .animated-clock:after {
+  .animated-clock::after {
     height: calc(150px / 2 - 10px);
   }
-  .animated-clock:before {
+  .animated-clock::before {
     top: 30px;
     height: calc(150px / 2 - 30px);
   }
 }
 
 @media (max-width: 1005px) {
-  body {
+  .home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,7 +112,7 @@
   .timer:hover {
     transition: 0.5s;
     font-size: 60px;
-    color: #ffa500;
+    color: #eed971ff;
   }
 
   .clock:hover {
@@ -120,15 +120,15 @@
     font-size: 85px;
   }
 
-  .animated-clock:after,
-  .animated-clock:before {
+  .animated-clock::after,
+  .animated-clock::before {
     width: 4px;
     top: 15px;
   }
-  .animated-clock:after {
+  .animated-clock::after {
     height: calc(100px / 2 - 10px);
   }
-  .animated-clock:before {
+  .animated-clock::before {
     top: 25px;
     height: calc(100px / 2 - 20px);
   }

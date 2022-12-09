@@ -7,12 +7,49 @@
     <title>Clock</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../responsive.css" />
+    <script
+      src="https://kit.fontawesome.com/1ce3d33595.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div id="time">
-      <div class="circle">
-        <div id="hours">00</div>
+    <header>
+      <a href="./index.html" class="home-btn">
+        <i class="fa-solid fa-house"></i>
+      </a>
+    </header>
+    <main class="digital-clock">
+      <div id="time">
+        <div class="circle" style="--clr: #ffa351ff">
+          <div class="dots hr_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="hh"></circle>
+          </svg>
+          <div id="hours">00</div>
+        </div>
+        <div class="circle" style="--clr: #ffbe7bff">
+          <div class="dots min_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="mm"></circle>
+          </svg>
+          <div id="minutes">00</div>
+        </div>
+        <div class="circle" style="--clr: #eed971ff">
+          <div class="dots sec_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="ss"></circle>
+          </svg>
+          <div id="secondes">00</div>
+        </div>
+        <div class="ap">
+          <div id="ampm">AM</div>
+        </div>
       </div>
-    </div>
+
+      <script src="../script/clock.js"></script>
+    </main>
   </body>
 </html>
