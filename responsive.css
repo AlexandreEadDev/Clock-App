@@ -1,24 +1,23 @@
 @media (min-width: 991.98px) {
   .clock {
     position: absolute;
-    left: calc(50% - 500px / 2 - 22.5px);
+    left: calc(50% - 500px / 2);
     top: calc(50% - 300px / 2 + 239px);
 
     font-size: 100px;
     line-height: 150px;
   }
 
-  .frame {
+  .animated-clock {
     position: absolute;
     width: 150px;
     height: 150px;
-    left: calc(50% - 150px / 2 - 15px);
     top: calc(50% - 150px / 2 + 302px);
   }
 
   .alarm {
     position: absolute;
-    left: calc(50% - 400px / 2 - 395px);
+    left: calc(50% - 400px / 2 - 370px);
     top: calc(50% - 150px / 2 + 450px);
 
     font-size: 70px;
@@ -27,7 +26,7 @@
 
   .stopwatch {
     position: absolute;
-    left: calc(50% - 400px / 2 - 20px);
+    left: calc(50% - 400px / 2);
     top: calc(50% - 150px / 2 + 527px);
 
     font-size: 70px;
@@ -36,7 +35,7 @@
 
   .timer {
     position: absolute;
-    left: calc(50% - 400px / 2 + 355px);
+    left: calc(50% - 400px / 2 + 370px);
     top: calc(50% - 150px / 2 + 450px);
 
     font-size: 70px;
@@ -54,6 +53,13 @@
     transition: 0.5s;
     font-size: 110px;
   }
+  .animated-clock:after {
+    height: calc(150px / 2 - 10px);
+  }
+  .animated-clock:before {
+    top: 30px;
+    height: calc(150px / 2 - 30px);
+  }
 }
 
 @media (max-width: 1005px) {
@@ -70,18 +76,13 @@
 
     font-size: 75px;
   }
-  .frame {
+  .animated-clock {
     flex: none;
     order: 1;
     flex-grow: 0;
 
-    width: 102px;
-    height: 102px;
-  }
-  .frame rect {
     width: 100px;
     height: 100px;
-    justify-content: center;
   }
   .alarm {
     flex: none;
@@ -117,5 +118,18 @@
   .clock:hover {
     transition: 0.5s;
     font-size: 85px;
+  }
+
+  .animated-clock:after,
+  .animated-clock:before {
+    width: 4px;
+    top: 15px;
+  }
+  .animated-clock:after {
+    height: calc(100px / 2 - 10px);
+  }
+  .animated-clock:before {
+    top: 25px;
+    height: calc(100px / 2 - 20px);
   }
 }

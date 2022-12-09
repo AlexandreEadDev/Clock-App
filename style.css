@@ -53,3 +53,44 @@ body {
 
   color: #ffffff;
 }
+
+.animated-clock-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-clock {
+  position: relative;
+  border: 5px solid #ffa500;
+  background: #1e1e1e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-clock:after,
+.animated-clock:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: #ffa500;
+  border-radius: 10px;
+  top: 10px;
+  animation: clockAnimation 5s infinite linear;
+  transform-origin: center calc(100% - 5px);
+}
+
+.animated-clock:before {
+  animation-duration: 15s;
+}
+
+@keyframes clockAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
