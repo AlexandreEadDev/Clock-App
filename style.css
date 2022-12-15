@@ -106,8 +106,10 @@ body {
 
 #time {
   display: flex;
+  justify-content: center;
   gap: 40px;
   color: #ffffff;
+  width: 100%;
 }
 
 #time .circle {
@@ -189,17 +191,15 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  margin-top: 100px;
 }
 
 #time .before {
   position: relative;
   width: 50px;
-  height: 100px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--clr);
 }
 
 #time .after {
@@ -235,63 +235,45 @@ button:hover {
   color: #eed971ff;
 }
 
-.input-wrapper {
-  display: grid;
-  grid-template-columns: 30% 60%;
-  padding: 20px;
-}
-
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "n1 n2 n3"
-    "n4 n5 n6"
-    "n7 n8 n9"
-    "n0 n0 n0";
-}
-
-#number-0 {
-  grid-area: n0;
-  width: 320px;
-}
-#number-1 {
-  grid-area: n1;
-}
-#number-2 {
-  grid-area: n2;
-}
-#number-3 {
-  grid-area: n3;
-}
-#number-4 {
-  grid-area: n4;
-}
-#number-5 {
-  grid-area: n5;
-}
-#number-6 {
-  grid-area: n6;
-}
-#number-7 {
-  grid-area: n7;
-}
-#number-8 {
-  grid-area: n8;
-}
-#number-9 {
-  grid-area: n9;
-}
-
 .validate-wrapper {
   display: flex;
   position: relative;
   width: 100%;
   justify-content: flex-end;
-  margin-right: 100px;
+  margin-right: 300px;
+  margin-top: 100px;
 }
 
 .validate {
   font-size: 2em;
+}
+
+#time select {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  height: 150px;
+  width: 150px;
+  font-size: 2em;
+  transform: translateY(-10px);
+  color: var(--clr);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #201e20;
+  cursor: pointer;
+}
+
+#time select::-ms-expand {
+  display: none;
+}
+
+#time select:hover {
+  color: #ffa351ff;
+  font-size: 2.3em;
+  transition: 0.5s;
 }

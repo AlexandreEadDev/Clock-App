@@ -20,32 +20,26 @@
     </header>
     <main class="digital-alarm">
       <div class=".alarm-wrapper" id="time">
-        <div class="before" style="--clr: #ffa351ff">
-          <div id="h-alarm">00</div>
+        <div class="before">
+          <select style="--clr: #ffbe7bff">
+            <option id="h-alarm" value="00" selected>00</option>
+            <option id="h-alarm" value="01">01</option>
+            <option id="h-alarm" value="02">02</option>
+          </select>
         </div>
         <div class="before">
           <div>:</div>
         </div>
-        <div class="before" style="--clr: #ffa351ff">
-          <div id="min-alarm ">00</div>
+        <div class="before">
+          <select style="--clr: #ffbe7bff">
+            <option id="m-alarm" value="00" selected disabled>00</option>
+          </select>
         </div>
       </div>
-      <div class="input-wrapper">
-        <form>
-          <button id="number-1">1</button>
-          <button id="number-2">2</button>
-          <button id="number-3">3</button>
-          <button id="number-4">4</button>
-          <button id="number-5">5</button>
-          <button id="number-6">6</button>
-          <button id="number-7">7</button>
-          <button id="number-8">8</button>
-          <button id="number-9">9</button>
-          <button id="number-0">0</button>
-        </form>
-      </div>
       <div class="validate-wrapper">
-        <button class="validate"><i class="fa-solid fa-check"></i></button>
+        <button class="validate">
+          <i class="fa-solid fa-check"></i>
+        </button>
       </div>
       <div id="time">
         <div class="after">
