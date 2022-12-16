@@ -193,7 +193,7 @@ body {
   min-height: 100vh;
 }
 
-#time .before {
+#time .alarm-set {
   position: relative;
   width: 50px;
   height: 150px;
@@ -202,19 +202,21 @@ body {
   align-items: center;
 }
 
-#time .after {
+#time .clock-a {
   position: relative;
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* translate apres la validation de l'alarm */
-  transform: translateY(700px);
 }
 
-#time div.ap.after {
+#time div.ap {
   transform: translateY(-30px);
+}
+
+.clock-a-wrapper {
+  transition: 2s;
   transform: translateY(700px);
 }
 
@@ -278,6 +280,19 @@ button:hover {
   transition: 0.5s;
 }
 
-/* .alarm-wrapper.active {
+.alarm-wrapper.active {
+  transition: 2s;
+  transform: translateY(150px);
+  opacity: 0.8;
+  pointer-events: none;
+}
 
-} */
+.clock-a-wrapper.active {
+  transition: 2s;
+  transform: translateY(-300px);
+}
+
+.validate-wrapper.active {
+  transition: 2s;
+  justify-content: center;
+}

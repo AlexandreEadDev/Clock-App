@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 318px;
+    padding: 170px 318px;
   }
   .clock {
     flex: none;

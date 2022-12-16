@@ -2,17 +2,12 @@ setInterval(() => {
   let hours = document.getElementById("hours");
   let minutes = document.getElementById("minutes");
   let secondes = document.getElementById("secondes");
-  let ampm = document.getElementById("ampm");
 
   let h = new Date().getHours();
   let m = new Date().getMinutes();
   let s = new Date().getSeconds();
-  let timeZones = h >= 12 ? "PM" : "AM";
 
   //convert 24 to 12 hours
-  if (h > 12) {
-    h = h - 12;
-  }
 
   //add 0 to single numbre
   h = h < 10 ? "0" + h : h;
@@ -22,12 +17,19 @@ setInterval(() => {
   hours.innerHTML = h + "<br><span>Hours</span>";
   minutes.innerHTML = m + "<br><span>Minutes</span>";
   secondes.innerHTML = s + "<br><span>Seconds</span>";
-  ampm.innerHTML = timeZones;
+
+  if (alarmTime == `${h}:${m}`) {
+    console.log("ding dong");
+  }
 });
 
 const selectMenu = document.querySelectorAll("select"),
-  content = document.querySelector(".alarm-wrapper, .clock"),
+  content = document.querySelectorAll(
+    ".alarm-wrapper, .clock-a-wrapper, .validate-wrapper"
+  ),
   alarmValidateBtn = document.querySelector("button");
+
+let alarmTime;
 
 for (let i = 24; i > 0; i--) {
   i = i < 10 ? "0" + i : i;
@@ -43,7 +45,10 @@ for (let i = 60; i > 0; i--) {
 
 function setAlarm() {
   let time = `${selectMenu[0].value}:${selectMenu[1].value}`;
-  content.classList.add("active");
+  alarmTime = time;
+  for (const contents of content) {
+    contents.classList.add("active");
+  }
 }
 
 alarmValidateBtn.addEventListener("click", setAlarm);
