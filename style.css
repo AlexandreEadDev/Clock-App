@@ -211,23 +211,6 @@ body {
   transform: translateY(700px);
 }
 
-button {
-  margin: 5px;
-  height: 100px;
-  width: 100px;
-  color: #ffffff;
-  background: #201e20;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  font-family: "font-2";
-}
-
-button:hover {
-  color: #eed971ff;
-}
-
 .validate-wrapper {
   display: flex;
   position: relative;
@@ -238,8 +221,24 @@ button:hover {
 }
 
 .validate {
-  font-size: 2em;
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+  background: #201e20;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.validate i {
+  font-size: 1.5em;
   cursor: pointer;
+  color: #ffffff;
+}
+
+.validate i:hover {
+  color: #eed971ff;
 }
 
 #time select {
@@ -284,6 +283,5 @@ button:hover {
   transform: translateY(-400px);
 }
 
-.fa-xmark::before {
-  content: "\f00d";
-}
+/* .fa-check.active {
+} */

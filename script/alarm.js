@@ -1,8 +1,9 @@
 const selectMenu = document.querySelectorAll("select"),
   content = document.querySelectorAll(
-    ".alarm-wrapper, .clock-a-wrapper, .validate-wrapper"
+    ".alarm-wrapper, .clock-a-wrapper, .validate-wrapper, .fa"
   ),
-  alarmValidateBtn = document.querySelector(".validate");
+  alarmValidateBtn = document.querySelector(".validate"),
+  icon = alarmValidateBtn.querySelector(".fa-check");
 
 let alarmTime;
 
@@ -27,10 +28,6 @@ function setAlarm() {
 }
 
 alarmValidateBtn.addEventListener("click", setAlarm);
-
-function changeIcon(x) {
-  x.classList.toggle("fa-xmark");
-}
 
 setInterval(() => {
   let hours = document.getElementById("hours");
