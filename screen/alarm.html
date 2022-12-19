@@ -7,10 +7,7 @@
     <title>Alarm</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../responsive.css" />
-    <script
-      src="https://kit.fontawesome.com/1ce3d33595.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.css" />
   </head>
   <body>
     <header>
@@ -36,17 +33,36 @@
       </div>
       <div class="validate-wrapper">
         <button class="validate">
-          <i class="fa-solid fa-check"></i>
+          <i
+            class="fa-solid fa-check"
+            onclick="changeIcon(this)"
+            aria-hidden="true"
+          ></i>
         </button>
       </div>
       <div class="clock-a-wrapper" id="time">
-        <div class="clock-a">
+        <div class="circle" style="--clr: #ffa351ff">
+          <div class="dots hr_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="hh"></circle>
+          </svg>
           <div id="hours">00</div>
         </div>
-        <div class="clock-a">
+        <div class="circle" style="--clr: #ffbe7bff">
+          <div class="dots min_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="mm"></circle>
+          </svg>
           <div id="minutes">00</div>
         </div>
-        <div class="clock-a">
+        <div class="circle" style="--clr: #eed971ff">
+          <div class="dots sec_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="ss"></circle>
+          </svg>
           <div id="secondes">00</div>
         </div>
       </div>

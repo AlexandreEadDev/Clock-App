@@ -202,15 +202,6 @@ body {
   align-items: center;
 }
 
-#time .clock-a {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #time div.ap {
   transform: translateY(-30px);
 }
@@ -248,6 +239,7 @@ button:hover {
 
 .validate {
   font-size: 2em;
+  cursor: pointer;
 }
 
 #time select {
@@ -289,10 +281,9 @@ button:hover {
 
 .clock-a-wrapper.active {
   transition: 2s;
-  transform: translateY(-300px);
+  transform: translateY(-400px);
 }
 
-.validate-wrapper.active {
-  transition: 2s;
-  justify-content: center;
+.fa-xmark::before {
+  content: "\f00d";
 }
