@@ -207,7 +207,6 @@ body {
 }
 
 .clock-a-wrapper {
-  transition: 2s;
   transform: translateY(700px);
 }
 
