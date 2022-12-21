@@ -208,6 +208,10 @@ body {
   transform: translateY(-30px);
 }
 
+.alarm-wrapper {
+  margin-top: 150px;
+}
+
 .clock-a-wrapper {
   transform: translateY(700px);
 }
@@ -281,10 +285,10 @@ body {
 
 .clock-a-wrapper.active {
   transition: 2s;
-  transform: translateY(-300px);
+  transform: translateY(-350px);
 }
 
 .validate-wrapper.active {
   transition: 2s;
-  transform: translateY(100px);
+  transform: translateY(50px);
 }
