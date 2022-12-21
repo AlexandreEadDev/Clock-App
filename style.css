@@ -10,6 +10,8 @@
 header {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
+
   transform: translateX(-70px);
 }
 
@@ -272,15 +274,17 @@ body {
 
 .alarm-wrapper.active {
   transition: 2s;
-  transform: translateY(150px);
+  transform: translateY(250px);
   opacity: 0.8;
   pointer-events: none;
 }
 
 .clock-a-wrapper.active {
   transition: 2s;
-  transform: translateY(-400px);
+  transform: translateY(-300px);
 }
 
-/* .fa-check.active {
-} */
+.validate-wrapper.active {
+  transition: 2s;
+  transform: translateY(100px);
+}
