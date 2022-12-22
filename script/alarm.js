@@ -4,7 +4,9 @@ const selectMenu = document.querySelectorAll("select"),
   ),
   alarmValidateBtn = document.querySelector(".fa");
 
-let alarmTime;
+let alarmTime,
+  isAlarmSet = false,
+  ringtone = new Audio("../icons&ringtones/alarm.mp3");
 
 for (let i = 24; i > 0; i--) {
   i = i < 10 ? "0" + i : i;
@@ -19,7 +21,17 @@ for (let i = 60; i > 0; i--) {
 }
 
 function setAlarm() {
+  if (isAlarmSet) {
+    alarmTime = "";
+    ringtone.pause();
+    for (const contents of content) {
+      contents.classList.remove("active");
+    }
+    return (isAlarmSet = false);
+  }
+
   let time = `${selectMenu[0].value}:${selectMenu[1].value}`;
+  isAlarmSet = true;
   alarmTime = time;
   for (const contents of content) {
     contents.classList.add("active");
@@ -65,6 +77,7 @@ setInterval(() => {
   //360/60 min&sec = 6
 
   if (alarmTime == `${h}:${m}`) {
-    console.log("ding dong");
+    ringtone.play();
+    ringtone.loop = true;
   }
 });
