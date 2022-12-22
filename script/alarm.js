@@ -2,7 +2,7 @@ const selectMenu = document.querySelectorAll("select"),
   content = document.querySelectorAll(
     ".alarm-wrapper, .clock-a-wrapper, .validate-wrapper"
   ),
-  alarmValidateBtn = document.querySelector(".validate");
+  alarmValidateBtn = document.querySelector(".fa");
 
 let alarmTime;
 
