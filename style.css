@@ -112,6 +112,7 @@ body {
   gap: 40px;
   color: #ffffff;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 #time .circle {
@@ -243,6 +244,7 @@ body {
 }
 
 .validate i:hover {
+  transition: 0.4s;
   color: #eed971ff;
 }
 
@@ -286,4 +288,41 @@ body {
 .clock-a-wrapper.active {
   transition: 2s;
   transform: translateY(-350px);
+}
+
+.watch {
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+  margin: 15rem auto;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 2rem 1rem;
+  padding: 0.5rem 1rem;
+  transition: 0.4s;
+}
+
+.controls button:hover {
+  transition: 0.4s;
+  color: #eed971ff;
+}
+
+.controls button:active {
+  color: #ffa351ff;
 }
