@@ -69,6 +69,7 @@ function reset() {
   hours.innerHTML = "00" + "<br><span>Hours</span>";
   minutes.innerHTML = "00" + "<br><span>Minutes</span>";
   secondes.innerHTML = "00" + "<br><span>Seconds</span>";
+  timer();
 }
 
 timer();
