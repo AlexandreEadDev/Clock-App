@@ -15,9 +15,50 @@
   <body>
     <header>
       <a href="./index.html" class="home-btn">
-        <i class="fa-solid fa-house"></i>
+        <i class="fas fa-home"></i>
       </a>
     </header>
+    <main class="timer">
+      <div id="time">
+        <div class="circle" style="--clr: #ffa351ff">
+          <div class="dots hr_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="hh"></circle>
+          </svg>
+          <div id="hours">00</div>
+        </div>
+        <div class="circle" style="--clr: #ffbe7bff">
+          <div class="dots min_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="mm"></circle>
+          </svg>
+          <div id="minutes">00</div>
+        </div>
+        <div class="circle" style="--clr: #eed971ff">
+          <div class="dots sec_dot"></div>
+          <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" id="ss"></circle>
+          </svg>
+          <div id="secondes">00</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button
+          type="button"
+          class="timer-btn timer-btn-control timer-btn-start"
+          id="start"
+        >
+          <i class="fas fa-play"></i>
+        </button>
+        <button type="button" class="timer-btn timer-btn-reset" id="reset">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </main>
+
     <script src="../script/timer.js"></script>
   </body>
 </html>

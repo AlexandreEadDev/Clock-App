@@ -34,25 +34,25 @@ body {
   text-decoration: none;
 }
 
-.clock {
+.clock-home {
   width: 500px;
   height: 100px;
   color: #ffa351ff;
 }
 
-.alarm {
+.alarm-home {
   width: 400px;
   height: 100px;
   color: #ffffff;
 }
 
-.stopwatch {
+.stopwatch-home {
   width: 400px;
   height: 100px;
   color: #ffffff;
 }
 
-.timer {
+.timer-home {
   width: 400px;
   height: 100px;
   color: #ffffff;
@@ -290,7 +290,7 @@ body {
   transform: translateY(-350px);
 }
 
-.watch {
+.stopwatch {
   text-align: center;
   width: 100%;
   max-width: 360px;
@@ -325,4 +325,22 @@ body {
 
 .controls button:active {
   color: #ffa351ff;
+}
+
+.timer-btn {
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+  background: #201e20;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.timer {
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+  margin: 15rem auto;
 }

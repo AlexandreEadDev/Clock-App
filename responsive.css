@@ -1,5 +1,5 @@
 @media (min-width: 991.98px) {
-  .clock {
+  .clock-home {
     position: absolute;
     left: calc(50% - 500px / 2);
     top: calc(50% - 300px / 2 + 239px);
@@ -15,7 +15,7 @@
     top: calc(50% - 150px / 2 + 302px);
   }
 
-  .alarm {
+  .alarm-home {
     position: absolute;
     left: calc(50% - 400px / 2 - 370px);
     top: calc(50% - 150px / 2 + 450px);
@@ -24,7 +24,7 @@
     line-height: 105px;
   }
 
-  .stopwatch {
+  .stopwatch-home {
     position: absolute;
     left: calc(50% - 400px / 2);
     top: calc(50% - 150px / 2 + 527px);
@@ -33,7 +33,7 @@
     line-height: 105px;
   }
 
-  .timer {
+  .timer-home {
     position: absolute;
     left: calc(50% - 400px / 2 + 370px);
     top: calc(50% - 150px / 2 + 450px);
@@ -41,15 +41,15 @@
     font-size: 70px;
     line-height: 105px;
   }
-  .alarm:hover,
-  .stopwatch:hover,
-  .timer:hover {
+  .alarm-home:hover,
+  .stopwatch-home:hover,
+  .timer-home:hover {
     transition: 0.5s;
     font-size: 80px;
     color: #eed971ff;
   }
 
-  .clock:hover {
+  .clock-home:hover {
     transition: 0.5s;
     font-size: 110px;
   }
@@ -69,7 +69,7 @@
     align-items: center;
     padding: 20px 318px;
   }
-  .clock {
+  .clock-home {
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -84,7 +84,7 @@
     width: 100px;
     height: 100px;
   }
-  .alarm {
+  .alarm-home {
     flex: none;
     order: 2;
     flex-grow: 0;
@@ -92,7 +92,7 @@
     font-size: 50px;
     line-height: 150px;
   }
-  .timer {
+  .timer-home {
     flex: none;
     order: 3;
     flex-grow: 0;
@@ -100,22 +100,22 @@
     font-size: 50px;
     line-height: 100px;
   }
-  .stopwatch {
+  .stopwatch-home {
     flex: none;
     order: 4;
     flex-grow: 0;
 
     font-size: 50px;
   }
-  .alarm:hover,
-  .stopwatch:hover,
-  .timer:hover {
+  .alarm-home:hover,
+  .stopwatch-home:hover,
+  .timer-home:hover {
     transition: 0.5s;
     font-size: 60px;
     color: #eed971ff;
   }
 
-  .clock:hover {
+  .clock-home:hover {
     transition: 0.5s;
     font-size: 85px;
   }
