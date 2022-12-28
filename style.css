@@ -303,7 +303,7 @@ body {
   justify-content: center;
 }
 
-.controls button {
+.controls div {
   appearance: none;
   background: none;
   border: none;
@@ -318,12 +318,12 @@ body {
   transition: 0.4s;
 }
 
-.controls button:hover {
+.controls div:hover {
   transition: 0.4s;
   color: #eed971ff;
 }
 
-.controls button:active {
+.controls div:active {
   color: #ffa351ff;
 }
 

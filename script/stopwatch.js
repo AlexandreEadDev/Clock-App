@@ -25,29 +25,29 @@ stop_button.addEventListener("click", stop);
 reset_button.addEventListener("click", reset);
 
 //update time
-function timer() {
+function stopwatch() {
   seconds++;
 
-  let hrs = Math.floor(seconds / 3600);
-  let mins = Math.floor((seconds - hrs * 3600) / 60);
-  let secs = seconds % 60;
+  let h = Math.floor(seconds / 3600);
+  let m = Math.floor((seconds - h * 3600) / 60);
+  let s = seconds % 60;
 
-  hrs = hrs < 10 ? "0" + hrs : hrs;
-  mins = mins < 10 ? "0" + mins : mins;
-  secs = secs < 10 ? "0" + secs : secs;
+  h = h < 10 ? "0" + h : h;
+  m = m < 10 ? "0" + m : m;
+  s = s < 10 ? "0" + s : s;
 
-  hours.innerHTML = hrs + "<br><span>Hours</span>";
-  minutes.innerHTML = mins + "<br><span>Minutes</span>";
-  secondes.innerHTML = secs + "<br><span>Seconds</span>";
+  hours.innerHTML = h + "<br><span>Hours</span>";
+  minutes.innerHTML = m + "<br><span>Minutes</span>";
+  secondes.innerHTML = s + "<br><span>Seconds</span>";
 
-  hh.style.strokeDashoffset = 440 - (440 * hrs) / 12;
-  mm.style.strokeDashoffset = 440 - (440 * mins) / 60;
-  ss.style.strokeDashoffset = 440 - (440 * secs) / 60;
+  hh.style.strokeDashoffset = 440 - (440 * h) / 12;
+  mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+  ss.style.strokeDashoffset = 440 - (440 * s) / 60;
 
-  hr_dot.style.transform = `rotate(${hrs * 15}deg)`;
+  hr_dot.style.transform = `rotate(${h * 15}deg)`;
   //360/12 hours = 30
-  min_dot.style.transform = `rotate(${mins * 6}deg)`;
-  sec_dot.style.transform = `rotate(${secs * 6}deg)`;
+  min_dot.style.transform = `rotate(${m * 6}deg)`;
+  sec_dot.style.transform = `rotate(${s * 6}deg)`;
   //360/60 min&sec = 6
 }
 
@@ -55,7 +55,7 @@ function start() {
   if (interval) {
     return;
   }
-  interval = setInterval(timer, 1000);
+  interval = setInterval(stopwatch, 1000);
 }
 
 function stop() {
@@ -69,7 +69,7 @@ function reset() {
   hours.innerHTML = "00" + "<br><span>Hours</span>";
   minutes.innerHTML = "00" + "<br><span>Minutes</span>";
   secondes.innerHTML = "00" + "<br><span>Seconds</span>";
-  timer();
+  stopwatch();
 }
 
-timer();
+stopwatch();
