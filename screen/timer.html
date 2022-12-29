@@ -45,12 +45,22 @@
           <div id="secondes">00</div>
         </div>
       </div>
+      <div class="input-time-wrapper">
+        <input
+          id="input-time"
+          type="pattern"
+          maxlength="6"
+          onkeypress="return restrictAlphabets(event)"
+          required
+        />
+        <span>Enter time (hh/mm/ss)</span>
+      </div>
       <div class="controls">
-        <div class="timer-btn timer-btn-control timer-btn-start" id="start">
-          <i onclick="changeIcon(this)" class="fa fa-play"></i>
+        <div class="timer-btn timer-btn-control timer-btn-start">
+          <i onclick="changeIcon(this)" class="fa fa-play" id="start"></i>
         </div>
-        <div class="timer-btn timer-btn-reset" id="reset">
-          <i class="fa fa-times"></i>
+        <div class="timer-btn timer-btn-reset">
+          <i class="fa fa-times" id="reset"></i>
         </div>
       </div>
     </main>

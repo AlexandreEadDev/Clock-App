@@ -309,7 +309,6 @@ body {
   border: none;
   outline: none;
   user-select: none;
-  cursor: pointer;
 
   color: #ffffff;
   font-size: 1.5rem;
@@ -318,12 +317,16 @@ body {
   transition: 0.4s;
 }
 
-.controls div:hover {
+.controls div i {
+  cursor: pointer;
+}
+
+.controls div i:hover {
   transition: 0.4s;
   color: #eed971ff;
 }
 
-.controls div:active {
+.controls div i:active {
   color: #ffa351ff;
 }
 
@@ -343,4 +346,43 @@ body {
   width: 100%;
   max-width: 360px;
   margin: 15rem auto;
+}
+
+.input-time-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.input-time-wrapper input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #191919;
+  background: #201e20;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.input-time-wrapper span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: grey;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.input-time-wrapper input:valid ~ span,
+.input-time-wrapper input:focus ~ span {
+  color: #ffffff;
+  transform: translateX(10px) translateY(-20px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #201e20;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
 }

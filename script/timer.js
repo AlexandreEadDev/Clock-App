@@ -1,7 +1,8 @@
 //Variables
 
 const start_button = document.getElementById("start"),
-  reset_button = document.getElementById("reset");
+  reset_button = document.getElementById("reset"),
+  input_time = document.getElementById("input-time");
 
 let hours = document.getElementById("hours");
 let minutes = document.getElementById("minutes");
@@ -16,12 +17,24 @@ let min_dot = document.querySelector(".min_dot");
 let sec_dot = document.querySelector(".sec_dot");
 
 let interval = null;
-let remainingSeconds = 5043;
+let remainingSeconds = 0;
 
 //listeners
 
-start_button.addEventListener("click", start);
-reset_button.addEventListener("click", reset);
+start_button.addEventListener("click", () => {
+  if (interval === null) {
+    remainingSeconds = input_time.value;
+    start();
+  } else {
+    input_time.value = remainingSeconds;
+    stop();
+  }
+});
+reset_button.addEventListener("click", () => {});
+
+input_time.addEventListener("", () => {
+  console.log(input_time.value);
+});
 
 //Function
 function timer() {
@@ -55,8 +68,31 @@ function changeIcon(x) {
   x.classList.toggle("fa-stop");
 }
 
-// function start() {
-//   if (interval === null) {
-//   }
-//   interval = setInterval(stopwatch, 1000);
-// }
+function start() {
+  if (remainingSeconds === 0) return;
+
+  interval = setInterval(() => {
+    remainingSeconds--;
+    timer();
+
+    if (remainingSeconds === 0) {
+      stop();
+    }
+  }, 1000);
+  changeIcon();
+}
+
+function stop() {
+  clearInterval(interval);
+  interval = null;
+  changeIcon();
+}
+
+function restrictAlphabets(e) {
+  var x = e.which || e.keycode;
+  if (x >= 48 && x <= 57) {
+    return true;
+  } else {
+    return false;
+  }
+}
