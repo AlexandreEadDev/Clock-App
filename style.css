@@ -386,3 +386,8 @@ body {
   border-left: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
 }
+
+.input-time-wrapper.active {
+  transition: 1s;
+  opacity: 0;
+}
