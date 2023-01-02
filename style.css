@@ -317,6 +317,15 @@ body {
   transition: 0.4s;
 }
 
+.controls div:hover {
+  transition: 0.4s;
+  color: #eed971ff;
+}
+
+.controls div:active {
+  color: #ffa351ff;
+}
+
 .controls div i {
   cursor: pointer;
 }
