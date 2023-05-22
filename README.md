@@ -55,11 +55,11 @@ Make sure you have the following software installed on your system:
 
 ### Installation
 
-1. Clone this repository to your local machine using the following command:
+1. Clone this repository to your local machine using the following command: https://github.com/PropZii/Portfolio-Clock.git
 
 2. Navigate to the project directory: cd my-project
 
-3. Install the required dependencies by running the following command:
+3. Install the required dependencies by running the following command: npm install
 
 ## Usage
 
